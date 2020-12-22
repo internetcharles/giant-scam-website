@@ -1,18 +1,17 @@
 import React from 'react';
-import { HeaderStyles, Heading } from './Header.styles';
+import { Wrapper, Heading, SubHeading } from './Header.styles';
 
 export const Header: React.FC = () => {
   return(
     <div>
-      <HeaderStyles />
-      <div>
+      <Wrapper>
         <Heading>
           GIANT SCAM INDUSTRIES
         </Heading>
-        <h2>
+        <SubHeading>
           A Legitimate Company, Not a Scam ©
-        </h2>
-      </div>
+        </SubHeading>
+      </Wrapper>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Title, Wrapper, Image, ImageWrapper } from './Game.styles';
 
 interface Props {
   title: string;
@@ -6,12 +7,21 @@ interface Props {
   imageURL: string;
 }
 
-export const Game: React.FC<Props> = ({ imageURL, title }) => {
+export const Game: React.FC<Props> = ({ imageURL, title, info }) => {
   return (
     <div>
-      <div>
-        <img src={imageURL} alt={title} />
+      <Wrapper>
+      <Title>
+        {title}
+        <div>
+        {info}
       </div>
+      </Title>
+      <ImageWrapper>
+        <Image src={imageURL} alt={title} />
+      </ImageWrapper>
+
+      </Wrapper>
     </div>
   )
 }
