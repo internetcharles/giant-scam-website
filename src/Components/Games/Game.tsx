@@ -14,13 +14,12 @@ export const Game: React.FC<Props> = ({ imageURL, title, info }) => {
       <Title>
         {title}
         <div>
-        {info}
-      </div>
+          {info}
+        </div>
       </Title>
       <ImageWrapper>
         <Image src={imageURL} alt={title} />
       </ImageWrapper>
-
       </Wrapper>
     </div>
   )
