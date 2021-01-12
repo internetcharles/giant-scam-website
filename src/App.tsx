@@ -4,13 +4,17 @@ import { Game } from './Components/Games/Game';
 import SnapshotOne from './Assets/snapshot1.jpg';
 import ChopItOne from './Assets/chopit1.jpg'
 import { ReverseGame } from './Components/Games/ReverseGame';
+import Collapsible from 'react-collapsible';
+import styles from './App.module.css'
+import Ticker from 'react-ticker';
+import { Wrapper } from './App.styles';
+import { Links } from './Components/Links/Links';
 
 const App: React.FC = () => {
-  return <div>
+  return <Wrapper>
     <Header />
-    <Game title="Snapshot" imageURL={SnapshotOne} info="TESTESTESTSETSETSETSETSETSET" />
-    <ReverseGame title="Chop It!" imageURL={ChopItOne} info="TESTSETESTSETSETSETSETSETSETSETSETES" />"
-  </div>
+    <Links />
+  </Wrapper>
 }
 
 export default App;

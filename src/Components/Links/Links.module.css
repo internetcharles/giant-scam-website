@@ -1,0 +1,10 @@
+.container {
+  border: 4px solid;
+  border-color: rgb(151, 151, 255);
+  color: rgb(218, 218, 253);
+}
+
+.borderDiv {
+  border: 2px solid;
+  border-color: blue;
+}

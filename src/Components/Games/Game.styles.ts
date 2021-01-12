@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-content: center;
   background-color: gray;
+  font-family: serif;
 `
 
 export const Title = styled.div`
