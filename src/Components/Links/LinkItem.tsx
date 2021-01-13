@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Links.module.css';
+import styles from './LinkItem.module.css';
 
 interface Props {
   URL: string,
@@ -10,7 +10,7 @@ export const LinkItem: React.FC<Props> = ({URL, title}) => {
   return (
     <div className={styles.wrapper}>
       <a href={URL}>
-        <div>{title}</div>
+        <div className={styles.item}>{title}</div>
       </a>
     </div>
   )

@@ -1,26 +1,26 @@
 import React from 'react';
-import { Title, Wrapper, Image, ImageWrapper } from './Game.styles';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 interface Props {
-  title: string;
-  info: string;
-  imageURL: string;
+  images: string[]
 }
 
-export const Game: React.FC<Props> = ({ imageURL, title, info }) => {
+export const Game: React.FC<Props> = ({ images }) => {
   return (
-    <div>
-      <Wrapper>
-      <Title>
-        {title}
+      <Carousel infiniteLoop showThumbs={false} swipeable={true} showArrows={true} width={"1000px"} dynamicHeight={true} autoPlay>
         <div>
-          {info}
+          <img src={images[0]} alt="One" />
+          <p></p>
         </div>
-      </Title>
-      <ImageWrapper>
-        <Image src={imageURL} alt={title} />
-      </ImageWrapper>
-      </Wrapper>
-    </div>
-  )
-}
+        <div>
+          <img src={images[1]} alt="Two" />
+          <p></p>
+        </div>
+        <div>
+          <img src={images[2]} alt="Three" />
+          <p></p>
+        </div>
+      </Carousel>
+  );
+};
