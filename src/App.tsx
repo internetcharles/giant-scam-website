@@ -5,13 +5,11 @@ import { Wrapper } from './App.styles';
 import { Links } from './Components/Links/Links';
 import Intro from './Components/Intro/Intro';
 import { Popup } from './Components/Popups/Popup';
-import DingSound from './Assets/Ding.mp3';
 
 const App: React.FC = () => {
 
   const [popupDisplayed, setPopupDisplayed] = useState(false);
-  const audio = new Audio(DingSound);
-  audio.muted = true;
+
 
   useEffect(() => {
     setTimeout(
@@ -29,8 +27,7 @@ const App: React.FC = () => {
 
   const showWindow = () => {
     setPopupDisplayed(true);
-    audio.muted = false;
-    audio.play();
+
   }
 
   const hideWindow = () => {
